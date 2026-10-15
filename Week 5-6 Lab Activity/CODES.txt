@@ -1,0 +1,481 @@
+Example 1:
+namespace WinFormsApp1
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int[] numbers = { 10, 20, 30, 40, 50 };
+            int answer = numbers[2];
+
+            label2.Text = "RESULT: " + answer.ToString();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
+
+Example 2:
+
+namespace WinFormsApp2
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int a = 10;
+            int b = 20;
+            int sum = a + b;
+
+            label3.Text = "RESULT: " + sum;
+        }
+    }
+}
+
+
+Example 3:
+
+namespace WinFormsApp3
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            string[] fruits = { "APPLE", "BANANA", "MANGO" };
+            string fruit = fruits[0];
+
+            label3.Text = "I JUST GOT AN " + fruit;
+
+        }
+    }
+}
+
+
+Example 4:
+
+namespace WinFormsApp4
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int[] numbers = { 10, 20, 30, 40, 50 };
+
+            label2.Text = "";
+
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                label2.Text += numbers[i] + "\n";
+            }
+            label2.TextAlign = ContentAlignment.TopCenter;
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
+
+Example 5:
+
+namespace WinFormsApp5
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            string[] names = { "Ana", "Ben", "Carlo", "David" };
+
+            foreach (string name in names)
+            {
+                if (name == "Carlo")
+                {
+                    label2.Text = "YOU FOUND CARLO!";
+                }
+            }
+
+        }
+    }
+}
+
+Example 6:
+
+namespace WinFormsApp6
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            int[] numbers = { 5, 10, 15 };
+            int total = 0;
+
+            foreach (int number in numbers)
+            {
+                total = total + number;
+            }
+
+            label2.Text = "THE SUM OF THE GIVEN NUMBERS IS: " + total;
+
+        }
+    }
+}
+
+Example 7:
+
+namespace WinFormsApp7
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            int[] numbers = { 10, 20, 30, 40, 50, 60, 70 };
+
+            int left = 0;
+            int right = numbers.Length - 1;
+            string result = "WE DID NOT FIND THE NUMBER 50!";
+
+            while (left <= right)
+            {
+                int middle = (left + right) / 2;
+
+                if (numbers[middle] == 50)
+                {
+                    result = "WE FOUND THE NUMBER 50!";
+                    break;
+                }
+                else if (numbers[middle] < 50)
+                {
+                    left = middle + 1;
+                }
+                else
+                {
+                    right = middle - 1;
+                }
+            }
+
+            label2.Text = result;
+
+        }
+    }
+}
+
+Example 8:
+
+namespace WinFormsApp8
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            int n = 16;
+            label2.Text = "";
+
+            while (n > 1)
+            {
+                n = n / 2;
+                label2.Text += n + "\n";
+            }
+
+        }
+    }
+}
+
+Example 9:
+
+namespace WinFormsApp9
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int low = 1;
+            int high = 100;
+
+            listBox1.Items.Clear();
+
+            while (low <= high)
+            {
+                int middle = (low + high) / 2;
+
+                listBox1.Items.Add(middle);
+
+                high = middle - 1;
+            }
+        }
+
+    }
+}
+
+Example 10:
+
+namespace WinFormsApp10
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int[] numbers = { 1, 2, 3, 4, 5 };
+
+            listBox1.Items.Clear();
+
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                for (int j = 0; j < numbers.Length; j++)
+                {
+                    listBox1.Items.Add(numbers[i] + " " + numbers[j]);
+                }
+            }
+        }
+    }
+}
+
+Example 11:
+
+namespace WinFormsApp11
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int[] numbers = { 1, 2, 3 };
+
+           listBox1.Items.Clear();
+
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                for (int j = 0; j < numbers.Length; j++)
+                {
+                    listBox1.Items.Add(numbers[i] + " " + numbers[j]);
+                }
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
+
+Example 12:
+
+namespace WinFormsApp12
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string[] students = { "Ana", "Ben", "Carlo" };
+
+            listBox1.Items.Clear();
+
+            for (int i = 0; i < students.Length; i++)
+            {
+                for (int j = 0; j < students.Length; j++)
+                {
+                    listBox1.Items.Add(
+                        students[i] + " checks " + students[j]);
+                }
+            }
+        }
+    }
+}
+
+Example 13:
+
+namespace WinFormsApp13
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int n = 3;
+            int combinations = 1;
+
+            for (int i = 0; i < n; i++)
+            {
+                combinations = combinations * 2;
+            }
+
+            label3.Text = "NUMBER OF COMBINATIONS ARE: " + combinations;
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
+
+Example 14:
+
+namespace WinFormsApp14
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int tosses = 5;
+            int possibilities = 1;
+
+            for (int i = 0; i < tosses; i++)
+            {
+                possibilities *= 2;
+            }
+
+            label3.Text = "Possible results are: " + possibilities;
+        }
+    }
+}
+
+Example 15:
+
+namespace WinFormsApp15
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int positions = 4;
+            int possibilities = 1;
+
+            for (int i = 0; i < positions; i++)
+            {
+                possibilities *= 2;
+            }
+
+           label3.Text = "Possible passwords are: " + possibilities;
+        }
+    }
+}
+
+
